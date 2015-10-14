@@ -1,8 +1,8 @@
 permalink: pretty
 prose:
   rooturl: '_posts'
-  siteurl: 'http://localdata.github.io/gary/'
-  relativeLinks: 'http://localdata.github.io/gary/links.jsonp'
+  siteurl: 'http://hampelm.github.io/gary/'
+  relativeLinks: 'http://hampelm.github.io/gary/links.jsonp'
   media: '/gary'
   metadata:
     _posts:
