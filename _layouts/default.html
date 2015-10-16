@@ -5,7 +5,7 @@ title: 'Gary Data - Data from the Gary Parcel Survey'
 <html>
 <head>
   <title>Gary Data - Data from the Gary Parcel Survey</title>
-  <link href='/gary/site.css' rel='stylesheet' /> <!-- was {{site.baseurl}} --> 
+  <link href='{{site.baseurl}}/site.css' rel='stylesheet' /> <!-- was {{site.baseurl}} -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
   <script type="text/javascript">
@@ -29,28 +29,43 @@ title: 'Gary Data - Data from the Gary Parcel Survey'
   </script>
 </head>
 <body>
+  <header class="garycounts">
+    <img src="{{site.baseurl}}/img/logos/garycounts.png">
+  </header>
 
   <div class="all">
     <div class="out">
       <div class="header">
         <h1>
-            Gary Parcel Survey
+            What gets measured gets improved.
         </h1>
         <ul id="nav">
           <li><a href="{{site.baseurl}}/" class="overview">Overview</a></li>
-          <li><a href="{{site.baseurl}}/map" class="overview">Explore the map</a></li>
+          <!--<li><a href="{{site.baseurl}}/mayor" class="overview">Letter from the Mayor</a></li>-->
+          <li><a href="{{site.baseurl}}/map" class="suvey">Parcel Survey</a></li>
           <li><a href="{{site.baseurl}}/reports" class="reports">Data &amp; Reports</a></li>
-          <li><a href="{{site.baseurl}}/about" class="about">How you can help</a></li>
+          <li><a href="{{site.baseurl}}/hardesthit" class="hardest">Hardest Hit Areas</a></li>
+          <li><a href="{{site.baseurl}}/about" class="about">You can help</a></li>
         </ul>
       </div>
 
       {{content}}
+
+      <div class="logos">
+        <h2>Supporters</h2>
+        <img src="{{site.baseurl}}/img/logos/knight.jpg">
+        <img src="{{site.baseurl}}/img/logos/Legacy.jpg">
+        <img src="{{site.baseurl}}/img/logos/Sanitary.jpg">
+        <img src="{{site.baseurl}}/img/logos/harrisUofC.jpg">
+        <img src="{{site.baseurl}}/img/logos/IUN.jpg">
+      </div>
     </div>
 
-    <div class="tophead">
+    <footer>
       <div>
         <img src="{{site.baseurl}}/img/seal-t.png" height="125" alt="" style="margin-bottom:2rem">
       </div>
+
       <a href="http://www.gary.in.us/">
         City of Gary
       </a>
