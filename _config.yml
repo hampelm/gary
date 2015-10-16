@@ -2,6 +2,7 @@ permalink: pretty
 prose:
   rooturl: '_posts'
   siteurl: '/gary'
+  baseurl: '/gary'
   relativeLinks: 'http://hampelm.github.io/gary/links.jsonp'
   media: '/gary'
   metadata:
