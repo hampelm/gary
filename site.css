@@ -43,7 +43,7 @@ h2 {
 }
 
 .home h2 {
-  margin-top: 1em;
+  margin-top: 0em;
 }
 
 .full h2 {
@@ -138,7 +138,6 @@ iframe {
 }
 
 #nav li {
-  text-transform: uppercase;
   display: inline-block;
   padding: 0;
   margin: 0;
@@ -149,7 +148,8 @@ iframe {
   color: #fff;
   font-weight: bold;
   text-decoration: none;
-  padding: 15px 25px;
+  padding: 15px 15px;
+  font-size: 1.2em;
 }
 
 #nav li.selected a {
@@ -178,7 +178,8 @@ and (max-width : 1100px) {
 h2.facts {
   color: #58aeff;
   line-height: 0.6;
-  font-size: 60px
+  font-size: 60px;
+  clear: both;
 }
 
 .factoids {
@@ -265,6 +266,7 @@ button {
 .logos {
   text-align: center;
   padding-bottom: 20px;
+  margin-top: 20px;
 }
 
 .logos h2 {
@@ -278,7 +280,7 @@ button {
 }
 
 .imgbar .logos img {
-  width: 60%;
+  width: 50%;
 }
 
 .imgbar .logos h2 {
@@ -329,6 +331,11 @@ and (max-width : 768px) {
   h2 {
     font-size: 40px;
     line-height: 1em;
+  }
+
+  .factoid {
+    float: none;
+    width: auto;
   }
 
 }
