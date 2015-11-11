@@ -114,6 +114,7 @@ var map;
         var blob = '<div><h3>' + properties['FULL_ADDRE'] + '</h3>';
         blob += '<p><strong>PIN: </strong>' + properties['PIN'] + '</p>';
         blob += '<p><strong>Deeded Owner: </strong>' + properties['DEEDED_OWN'] + '</p>';
+        blob += '<p><strong>Bid Status: </strong>' + properties['BID_STATUS'] + '</p>';
         // blob += '<p><strong>Back Taxes: </strong>' + accounting.formatMoney(properties['BACK_TAXES']) + '</p>';
         // blob += '<p><strong>Proposed End Use: </strong>' + properties['END_USE'] + '</p>';
         // blob += '<p><strong>Demolition Estimate: </strong>' + accounting.formatMoney(properties['CITY_ESTIM']) + '</p>';
