@@ -223,7 +223,7 @@ h2.facts {
 /* Hardest hit map ========= */
 #map {
   height: 600px;
-  width: 75%;
+  width: 100%;
   float: left;
 }
 
@@ -232,6 +232,7 @@ h2.facts {
 }
 
 #info {
+  display: none;
   width: 25%;
   float: right;
 }
