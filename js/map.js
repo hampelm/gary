@@ -104,12 +104,15 @@ var map;
             e.target.setStyle({'fillColor':"#ffffb2"});
 
             $('#info').html(parcelInfo(feature.properties));
+            $('#info').show();
+            $('#map').css('width', '75%');
 
             $('#map-top').html('<strong><a href="#" class="map-back">Back to all districts</a></strong>');
             $('.map-back').on('click', function(e) {
                 e.preventDefault();
                 map.fitBounds([[41.51,-87.4381],[41.66,-87.2198]]);
-                $('#info').html('');
+                $('#info').hide();
+                $('#map').css('width', '100%');
                 $('#map-top').html('<strong><div>Select a district and property for details</div></strong>');
             }.bind(map));
 
