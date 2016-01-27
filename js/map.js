@@ -9,6 +9,7 @@ var map;
     L.tileLayer('https://{s}.tiles.mapbox.com/v3/derekeder.hehblhbj/{z}/{x}/{y}.png', {
         attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
     }).addTo(map);
+
     map.on('zoomend', function(e){
         if (typeof hardestHit !== 'undefined'){
             if (map.getZoom() >= 14 ){
@@ -22,6 +23,7 @@ var map;
             councilCounts.setStyle({'weight': districtOutlineWeight})
         }
     });
+
     $.when($.getJSON('../data/hardest_hit_update.geojson'),
         $.getJSON('../data/council_counts_update.geojson')).then(
         function(hardest_hit, council_counts){
@@ -100,12 +102,17 @@ var map;
                 lastClicked.setStyle({'fillColor':"#f03b20"});
             }
             e.target.setStyle({'fillColor':"#ffffb2"});
+
             $('#info').html(parcelInfo(feature.properties));
+
+            $('#map-top').html('<strong><a href="#" class="map-back">Back to all districts</a></strong>');
             $('.map-back').on('click', function(e) {
                 e.preventDefault();
                 map.fitBounds([[41.51,-87.4381],[41.66,-87.2198]]);
-                $('#info').html('<h3><div>Select a district and property for details</div></h3>');
+                $('#info').html('');
+                $('#map-top').html('<strong><div>Select a district and property for details</div></strong>');
             }.bind(map));
+
             map.setView(e.target.getBounds().getCenter(), 17);
             lastClicked = e.target;
         });
