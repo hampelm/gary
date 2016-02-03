@@ -24,7 +24,7 @@ var map;
         }
     });
 
-    $.when($.getJSON('../data/hardest_hit_update.geojson'),
+    $.when($.getJSON('../data/hardest_hit_feb2016.geojson'),
         $.getJSON('../data/council_counts_update.geojson')).then(
         function(hardest_hit, council_counts){
             councilCounts = L.geoJson(council_counts, {
@@ -121,18 +121,22 @@ var map;
         });
     }
     function parcelInfo(properties){
-        var blob = '<div><h3>' + properties['FULL_ADDRE'] + '</h3>';
+        var blob = '<div><h3>' + properties['FULL_ADDR'] + '</h3>';
         blob += '<p><strong>PIN: </strong>' + properties['PIN'] + '</p>';
-        blob += '<p><strong>Deeded Owner: </strong>' + properties['DEEDED_OWN'] + '</p>';
         blob += '<p><strong>Bid Status: </strong>' + properties['BID_STATUS'] + '</p>';
-        if (properties.NTP_COMPLE !== null) {
-            blob += '<p><strong>Scheduled Demolition Complete: </strong>' + properties['NTP_COMPLE'] + '</p>';
+        blob += '<p><strong>Deeded Owner: </strong>' + properties['DEEDED_OWN'] + '</p>';
+
+        if (properties.NTP_START !== null) {
+            blob += '<p><strong>Scheduled Demolition: </strong>' + properties.NTP_START + '</p>';
+        }
+        if (properties.DEMO_COMPL !== null) {
+            blob += '<p><strong>Scheduled Demolition Complete: </strong>' + properties.DEMO_COMPL + '</p>';
         }
         // blob += '<p><strong>Back Taxes: </strong>' + accounting.formatMoney(properties['BACK_TAXES']) + '</p>';
         // blob += '<p><strong>Proposed End Use: </strong>' + properties['END_USE'] + '</p>';
         // blob += '<p><strong>Demolition Estimate: </strong>' + accounting.formatMoney(properties['CITY_ESTIM']) + '</p>';
         blob += '<p><strong>Neighborhood: </strong>' + properties['NEIGHBORHO'] + '</p>';
-        blob += '<p><strong>Council District: </strong>' + properties['COUNCIL_D'] + '</p>';
+        blob += '<p><strong>Council District: </strong>' + properties['COUNCIL_DI'] + '</p>';
         blob += '<p><a href="#" class="map-back">Back to all districts</a></p>';
         blob += '</div>';
         return blob
