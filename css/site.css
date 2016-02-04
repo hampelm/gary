@@ -245,6 +245,11 @@ h2.facts {
   font-size: 18px;
 }
 
+#info p {
+  padding-bottom: 0;
+  text-transform: capitalize !important;
+}
+
 /* Forms ========= */
 label {
   display: block;

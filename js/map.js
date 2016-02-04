@@ -120,23 +120,34 @@ var map;
             lastClicked = e.target;
         });
     }
+
+    function formatDate(d) {
+        // Given in the format  YYYY/MM/DD
+        // We want MM/DD/YYYY
+        var date = new Date(d);
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+        return month + '/' + day + '/' + year;
+    }
+
     function parcelInfo(properties){
         var blob = '<div><h3>' + properties['FULL_ADDR'] + '</h3>';
         blob += '<p><strong>PIN: </strong>' + properties['PIN'] + '</p>';
-        blob += '<p><strong>Bid Status: </strong>' + properties['BID_STATUS'] + '</p>';
-        blob += '<p><strong>Deeded Owner: </strong>' + properties['DEEDED_OWN'] + '</p>';
+        blob += '<p><strong>Bid Status: </strong>' + properties['BID_STATUS'].toLowerCase().replace('iii', 'III').replace('ii', 'II').replace('hhf', 'HHF') + '</p>';
+        blob += '<p><strong>Deeded Owner: </strong>' + properties['DEEDED_OWN'].toLowerCase() + '</p>';
 
         if (properties.NTP_START !== null) {
-            blob += '<p><strong>Scheduled Demolition: </strong>' + properties.NTP_START + '</p>';
+            blob += '<p><strong>Scheduled Demolition: </strong>' + formatDate(properties.NTP_START) + '</p>';
         }
         if (properties.DEMO_COMPL !== null) {
-            blob += '<p><strong>Scheduled Demolition Complete: </strong>' + properties.DEMO_COMPL + '</p>';
+            blob += '<p><strong>Scheduled Demolition Complete: </strong>' + formatDate(properties.DEMO_COMPL) + '</p>';
         }
         // blob += '<p><strong>Back Taxes: </strong>' + accounting.formatMoney(properties['BACK_TAXES']) + '</p>';
         // blob += '<p><strong>Proposed End Use: </strong>' + properties['END_USE'] + '</p>';
         // blob += '<p><strong>Demolition Estimate: </strong>' + accounting.formatMoney(properties['CITY_ESTIM']) + '</p>';
-        blob += '<p><strong>Neighborhood: </strong>' + properties['NEIGHBORHO'] + '</p>';
-        blob += '<p><strong>Council District: </strong>' + properties['COUNCIL_DI'] + '</p>';
+        blob += '<p><strong>Neighborhood: </strong>' + properties['NEIGHBORHO'].toLowerCase() + '</p>';
+        blob += '<p><strong>Council District: </strong>' + properties['COUNCIL_DI'].toLowerCase() + '</p>';
         blob += '<p><a href="#" class="map-back">Back to all districts</a></p>';
         blob += '</div>';
         return blob
