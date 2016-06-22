@@ -5,6 +5,7 @@ title: 'Gary Counts - Data from the Gary Parcel Survey'
 <html>
 <head>
   <title>Gary Counts - Data from the Gary Parcel Survey</title>
+  <meta charset="utf-8">
   <link href='{{site.baseurl}}/css/site.css' rel='stylesheet' /> <!-- was {{site.baseurl}} -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
@@ -28,7 +29,7 @@ title: 'Gary Counts - Data from the Gary Parcel Survey'
     });
   </script>
 </head>
-<body>
+<body class="{{ page.class }}">
   <header class="garycounts">
     <img src="{{site.baseurl}}/img/logos/garycounts.png">
   </header>
@@ -45,6 +46,7 @@ title: 'Gary Counts - Data from the Gary Parcel Survey'
           <li><a href="{{site.baseurl}}/map" class="suvey">Parcel Survey</a></li>
           <li><a href="{{site.baseurl}}/reports" class="reports">Data &amp; Reports</a></li>
           <li><a href="{{site.baseurl}}/hardesthit" class="hardest">Hardest Hit Areas</a></li>
+          <li><a href="{{site.baseurl}}/media" class="hardest">Media</a></li>
           <li><a href="{{site.baseurl}}/about" class="about">You can help</a></li>
         </ul>
       </div>
