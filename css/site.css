@@ -70,13 +70,13 @@ a:visited {
   background: transparent url(../img/photos/home.jpg) no-repeat center -10vh;
 }
 .hhf .all {
-  background: transparent url(../img/photos/hhf.jpg) no-repeat center -12vh;
+  background: transparent url(../img/photos/hhf.jpg) no-repeat center -18vh;
 }
 .reports .all {
-  background: transparent url(../img/photos/reports.jpg) no-repeat center -5vh;
+  background: transparent url(../img/photos/reports.jpg) no-repeat center -12vw;
 }
 .media .all {
-  background: transparent url(../img/photos/media.jpg) no-repeat center -10vh;
+  background: transparent url(../img/photos/media.jpg) no-repeat center -13vw;
 }
 .survey .all {
   background: transparent url(../img/team-small-crop.jpg) no-repeat center -5vh;
@@ -85,6 +85,19 @@ a:visited {
   background: transparent url(../img/photos/help.jpg) no-repeat center -5vh;
   background-size: 100% auto !important;
   overflow: auto;
+}
+
+@media only screen
+and (min-width : 1600px) {
+  .home .all {
+    background: transparent url(../img/photos/home.jpg) no-repeat center -16vh;
+  }
+
+
+.reports .all {
+  background: transparent url(../img/photos/reports.jpg) no-repeat center -15vh;
+}
+
 }
 
 header {
@@ -407,4 +420,19 @@ and (max-width : 768px) {
     background-position: center 0px!important;
   }
 
+  .media .all {
+    background-position: center -12vw!important;
+  }
+
+  .reports .all {
+    background-position: center -10vw!important;
+  }
+
+  .home .all {
+    background-position: center -10vw!important;
+  }
+
+  .hhf .all {
+    background-position: center -16vw!important;
+  }
 }
