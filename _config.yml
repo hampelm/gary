@@ -15,30 +15,15 @@ prose:
         field:
           element: "hidden"
           value: "blog"
+      - name: "class"
+        field:
+          element: "hidden"
+          value: ""
       - name: "title"
         field:
           element: "text"
           label: "Title"
           value: ""
-      - name: "splash"
-        field:
-          element: "text"
-          label: "Splash image"
-          value: ""
-      - name: "tags"
-        field:
-          element: "multiselect"
-          label: "Add Tags"
-          placeholder: "Choose Tags"
-          options:
-            - name: "Apples"
-              value: "apples"
-            - name: "Bananas"
-              value: "bananas"
-            - name: "Pears"
-              value: "pears"
-            - name: "Mangos"
-              value: "mangos"
     _posts/static:
       - name: "layout"
         field:
