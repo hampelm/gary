@@ -1,10 +1,10 @@
 permalink: pretty
-baseurl: '/gary'
+baseurl: '/'
 prose:
   rooturl: '_posts'
-  siteurl: '/gary'
+  siteurl: '/'
   relativeLinks: 'http://hampelm.github.io/gary/links.jsonp'
-  media: '/gary'
+  media: '/'
   metadata:
     _posts:
       - name: "title"
