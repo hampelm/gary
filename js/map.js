@@ -24,9 +24,27 @@ var map;
         }
     });
 
-    $.when($.getJSON('../data/hardest_hit_feb2016.geojson'),
+    $.when($.getJSON('../data/hardest_hit_17.geojson'),
         $.getJSON('../data/council_counts_update.geojson')).then(
-        function(hardest_hit, council_counts){
+        function(hardest_hit, council_counts) {
+            hardest_hit = hardest_hit[0];
+            council_counts = council_counts[0];
+
+            // console.log("Got", hardest_hit, council_counts);
+            // Update the counts (if needed -- slow)
+            // for (var i = 0; i < council_counts.features.length; i++) {
+            //     var district = council_counts.features[i];
+            //     district.properties.COUNT = 0;
+            //     for (var j = 0; j < hardest_hit.features.length; j++) {
+            //         var parcel = hardest_hit.features[j];
+            //         var intersect = turf.intersect(district, parcel);
+            //         // console.log('xxx', intersect);
+            //         if (intersect) {
+            //             district.properties.COUNT++;
+            //         }
+            //     }
+            // }
+
             councilCounts = L.geoJson(council_counts, {
                 style: styleCouncils,
                 onEachFeature: function(feature, layer){
