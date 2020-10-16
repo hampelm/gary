@@ -4,7 +4,7 @@ prose:
   rooturl: '_posts'
   siteurl: ''
   relativeLinks: 'http://hampelm.github.io/gary/links.jsonp'
-  media: ''
+  media: '_posts'
   metadata:
     _posts:
       - name: "title"
